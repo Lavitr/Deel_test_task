@@ -1,6 +1,6 @@
 ## To install all the dependencies defined in a package.json file run:
 
-`yarn` or `yarn install`
+## `yarn` or `yarn install`
 
 ## To start project run command:
 

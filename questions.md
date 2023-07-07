@@ -7,14 +7,14 @@ Since `React.PureComponent` implements `shouldComponentUpdate()` with a shallow 
 
 ```
 class Greeting extends PureComponent {
-render() {
- return (
-    <div>
-    <h1>Hello, {this.props.user.data.name}!</h1>
-    <h1>Hello, {this.props.user.data.surname}!</h1>
-    </div>
+  render() {
+    return (
+      <div>
+        <h1>Hello, {this.props.user.data.name}!</h1>
+        <h1>Hello, {this.props.user.data.surname}!</h1>
+      </div>
     );
-}
+  }
 }
 
 <Greeting user={{data:{name: "John", surname: "Smith"}}}>
@@ -37,23 +37,23 @@ render() {
     I can give only two examples of HOC pattern
    1.Inheritance Inversion
    ```
-   function iiHOC(WrappedComponent) {
-   return class Enhancer extends WrappedComponent {
+  function iiHOC(WrappedComponent) {
+  return class Enhancer extends WrappedComponent {
     render() {
-      return super.render()
+      return super.render();
     }
-   }
-   }
+  };
+}
    ```
    2.Props Proxy
    ```
    function ppHOC(WrappedComponent) {
-   return class PP extends React.Component {
+  return class PP extends React.Component {
     render() {
-      return <WrappedComponent {...this.props}/>
+      return <WrappedComponent {...this.props} />;
     }
-   }
-   }
+  };
+}
    ```
 
 7. What's the difference in handling exceptions in promises, callbacks
@@ -87,8 +87,5 @@ render() {
 
 11. How to render an HTML string coming from the server.
     `dangerouslySetInnerHTML`
-    `<div dangerouslySetInnerHTML={"string"}/>`
+    `<div dangerouslySetInnerHTML={{ __html: "string" }}/>`
 
-```
-
-```
