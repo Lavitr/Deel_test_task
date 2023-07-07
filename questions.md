@@ -34,26 +34,26 @@ class Greeting extends PureComponent {
    <Fragment>, often used via <>...</> syntax, lets group elements without a wrapper node. By this there is no extra node added to the DOM.
    I can not give an example of break app.
 6. Give 3 examples of the HOC pattern.
-    I can give only two examples of HOC pattern
+    I can give only two examples of HOC patterns:
+   ```
    1.Inheritance Inversion
+   function iiHOC(WrappedComponent) {
+   return class Enhancer extends WrappedComponent {
+      render() {
+         return super.render();
+      }
+   };
+   }
    ```
-  function iiHOC(WrappedComponent) {
-  return class Enhancer extends WrappedComponent {
-    render() {
-      return super.render();
-    }
-  };
-}
    ```
-   2.Props Proxy
-   ```
-   function ppHOC(WrappedComponent) {
-  return class PP extends React.Component {
-    render() {
-      return <WrappedComponent {...this.props} />;
-    }
-  };
-}
+      2.Props Proxy
+      function ppHOC(WrappedComponent) {
+   return class PP extends React.Component {
+      render() {
+         return <WrappedComponent {...this.props} />;
+      }
+   };
+   }
    ```
 
 7. What's the difference in handling exceptions in promises, callbacks
