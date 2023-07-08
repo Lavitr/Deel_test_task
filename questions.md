@@ -24,6 +24,10 @@ class Greeting extends PureComponent {
    `ShouldComponentUpdate` is testing for whether the values of the object are strictly equal. If they’re not, then (and only then) will the component update. But since context is not checked, nothing happens.
 
 3. Describe 3 ways to pass information from a component to its PARENT.
+   I can describe only one way:
+   -Pass a function as a prop to the Child component.
+   -Call the function in the Child component and pass the data as arguments.
+   -Access the data in the function in the Parent.
 
 4. Give 2 ways to prevent components from re-rendering.
    1 - Memoization with `React.memo` and hooks `React.useMemo()`, `React.useCallback()`
@@ -86,6 +90,6 @@ class Greeting extends PureComponent {
 - CSS module
 
 11. How to render an HTML string coming from the server.
-    `dangerouslySetInnerHTML`
+    We can use an attribute - `dangerouslySetInnerHTML`.
     `<div dangerouslySetInnerHTML={{ __html: "string" }}/>`
 

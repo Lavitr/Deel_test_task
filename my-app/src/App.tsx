@@ -5,7 +5,7 @@ import "./App.css";
 
 const App: FC = () => {
   const [searchValue, setSearchValue] = useState<string>("");
-  const [allUserNamse, setAllUserNames] = useState<string[]>([]);
+  const [allUserNames, setAllUserNames] = useState<string[]>([]);
   const [filteredNames, setFilteredNames] = useState<string[]>([]);
 
   useEffect(() => {
@@ -17,13 +17,13 @@ const App: FC = () => {
     setSearchValue(value);
     setFilteredNames(
       value
-        ? allUserNamse
+        ? allUserNames
             .filter(
               (userName) =>
                 value && userName.toLowerCase().includes(value.toLowerCase())
             )
             .map((userName) => highlightSearchPattern(userName, value))
-        : allUserNamse
+        : allUserNames
     );
   };
 
