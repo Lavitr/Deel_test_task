@@ -1,7 +1,7 @@
 ## Usage
 
 ```
-cd Deel_test_task/my-app
+cd my-app
 yarn or yarn install
 yarn start
 ```
