@@ -30,7 +30,7 @@ const App: FC = () => {
   const handleItemClick = (name: string): void => {
     const userName = name
       .replace("</span>", "")
-      .replace("<span style='background-color: yellow;'>", "");
+      .replace(`<span style="background-color: yellow;">`, "");
     setSearchValue(userName);
     setFilteredNames([]);
   };

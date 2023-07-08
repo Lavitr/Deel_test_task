@@ -25,9 +25,7 @@ export const highlightSearchPattern = (
   const regex = new RegExp(searchValue, "gi");
   const userNameWithHighlight = (userName as any as string).replace(
     regex,
-    (str) => {
-      return "<span style='background-color: yellow;'>" + str + "</span>";
-    }
+    (str) => `<span style="background-color: yellow;">${str}</span>`
   );
   return userNameWithHighlight;
 };
