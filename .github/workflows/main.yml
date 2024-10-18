@@ -1,0 +1,9 @@
+name: Lint
+on:
+  push:
+jobs:
+  lint:
+    runs-on: [ubuntu-latest, self-hosted]
+    steps:
+      - name: lint
+        run: pnpm lint
